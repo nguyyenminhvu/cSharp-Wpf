@@ -1,0 +1,5 @@
+C:\Users\ACER\Desktop\TodoList.exe
+C:\Users\ACER\Desktop\TodoList.dll
+C:\Users\ACER\Desktop\TodoList.deps.json
+C:\Users\ACER\Desktop\TodoList.runtimeconfig.json
+C:\Users\ACER\Desktop\TodoList.pdb
