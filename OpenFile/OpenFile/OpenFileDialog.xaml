@@ -1,0 +1,29 @@
+﻿<Window x:Class="OpenFile.OpenFileDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:OpenFile"
+        mc:Ignorable="d"
+        Title="OpenFileDialog" Height="150" Width="420">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="8*"></ColumnDefinition>
+                <ColumnDefinition Width="2*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="0">
+                <TextBox x:Name="txbInputPath" Width="290" FontSize="16"></TextBox>
+            </Grid>
+            <Grid Grid.Column="1">
+                <Button x:Name="btnClickOpen" Content="Open" Width="70" Click="btnClickOpen_Click"></Button>
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>
