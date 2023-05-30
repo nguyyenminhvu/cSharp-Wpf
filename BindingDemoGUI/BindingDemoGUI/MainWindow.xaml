@@ -1,0 +1,63 @@
+﻿<Window x:Class="BindingDemoGUI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BindingDemoGUI"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="4*"></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition ></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Button Content="Button" HorizontalAlignment="Left" Margin="212,87,0,0" VerticalAlignment="Top" Click="Button_Click"/>
+
+        </Grid>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition  Width="6*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="0">
+                <Label FontSize="30" VerticalAlignment="Center" HorizontalAlignment="Center">From: </Label>
+            </Grid>
+            <Grid Grid.Column="2">
+                <TextBox x:Name="txbFrom" FontSize="20px" VerticalAlignment="Center" Width="500"></TextBox>
+            </Grid>
+        </Grid>
+        <Grid Grid.Row="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition  Width="6*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="0">
+                <Label Content="To:" FontSize="30" VerticalAlignment="Center" HorizontalAlignment="Center"></Label>
+            </Grid>
+            <Grid Grid.Column="2">
+                <TextBox x:Name="txbTo" Width="500" FontSize="20" VerticalAlignment="Center" Text="{Binding Path=Text, ElementName=txbFrom}" ></TextBox>
+            </Grid>
+        </Grid>
+        <Grid Grid.Row="5">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="2">
+                <Button Content="{Binding BtnNameBinding}"></Button>
+            </Grid>
+        </Grid>
+        
+    </Grid>
+</Window>
